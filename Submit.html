@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Thank You!</title>
+<link href="RABBIT.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+
+var imgArray = new Array(2)
+var index= 0;
+
+function cycle()
+{
+	document.banner.src= imgArray[index].src;
+	index++
+	if (index>1)
+	{
+		index= 0;
+	}
+	setTimeout("cycle()",2900);
+	return;
+}
+
+function startup()
+	{
+		imgArray[0] = new Image;
+		imgArray[0].src = "HappyBunny.gif";
+		imgArray[1] = new Image;
+		imgArray[1].src = "HappyBunny2.gif";
+		cycle();
+		return;
+	}
+	</script>
+	</head>
+
+<body onLoad="startup()">
+</center>
+<center><img src="Banner.gif" width="674" height="196" /></center>
+	<p>&nbsp;</p>
+	<div align="center"><img src="HappyBunny.gif" name="banner" width="1500" height="200" /></div>
+<body>
+
+<center> <h1>&nbsp;</h1>
+  <h1>&nbsp;</h1>
+  <h1>&nbsp;</h1>
+  <h1>
+    <marquee width=1500 height=200 direction=right behavior=alternate> 
+    Your Order has been Submitted!</marquee>
+  </h1>
+  <p>&nbsp;</p>
+  <h1><a href="Rabboot.html">Back to Shop</a></h1>
+</center>
+</h1>
+<center></center>
+
+</body>
+</html>

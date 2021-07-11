@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Rabboot</title>
+<style type="text/css">
+body,td,th {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 18px;
+}
+</style>
+<link href="RABBIT.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+
+var imgArray = new Array(4)
+var index= 0;
+
+function doBack()
+{
+	if(index > 0)
+	{
+		index--;
+		document.slideshow.src= imgArray[index].src;
+	}
+	return;
+}
+
+function doNext()
+{
+	if(index<3)
+	{
+		index++;
+		document.slideshow.src= imgArray[index].src;
+	}
+	return;
+}
+
+function startup()
+	{
+		imgArray[0] = new Image;
+		imgArray[0].src = "Angora1.jpg";
+		imgArray[1] = new Image;
+		imgArray[1].src = "Angora3.jpg";
+		imgArray[2] = new Image;
+		imgArray[2].src = "Rabbit2.0.jpg";
+		imgArray[3]=new Image;
+		imgArray[3].src="AngoraBabs.jpg";
+		select();
+		return;
+	}
+	
+	</script>
+<body>
+
+
+<center><img src="Banner.gif" width="869" height="311" /></center>
+<p align="center">
+
+<body onLoad="startup()">
+<center><h3 align="center"><table width="187" height="85" border="5" align="center" cellpadding="10" align-center">
+<tr>
+	<td width="151"><p style="font-family;courier;font-size:200%;color:Red"><a href="aboutus.html">About Us</a><br /> </p></td>
+</table></h3></center>
+<div align="center">
+  <h2>&nbsp;</h2>
+		<h2><strong>Special Feature:</strong></h2>
+		<h3>English Angora</h3>
+		
+        <p>
+			<img src="Angora1.jpg" name="slideshow" width="414" height="333">
+   
+		</p>
+		<p>
+			<a href="javascript:doBack()">Back</a>
+			&nbsp;&nbsp;&nbsp;
+			<a href="javascript:doNext()">Next</a>
+		</p>
+</div>
+
+<table width="140" height= "150" border="5" align="center" cellpadding="20">
+  <tr>
+    <td bgcolor="#AE1E1E" height="50"><strong>
+    <h2><center>Rabbit Breeds</center></h2></strong></td>
+    </tr>
+  <tr>
+	<td width="84" bgcolor="#D54343" height="478"><p align="center"><strong>Jersey Woolly</strong></p>
+
+    <p>&nbsp;</p>
+    <img src="Jersey.png" width="320" height="307" onmouseover="this.src='jwface.png'" onmouseout="this.src='Jersey.png'" />
+    </td>
+	<h3>&nbsp;	  </h3>
+	</tr>
+
+
+<tr> 
+	<td height="478" bgcolor="#D54343"><p><center>
+	  <strong>Harlequin</strong>
+	</center></p>
+    
+    <p></p>
+    <img src="Harlequin.png" width="320" height="340" onmouseover="this.src='HFace2.png'" width="320" height="400" onmouseout="this.src='Harlequin.png'" />
+    
+    </td>
+	<h3>&nbsp;	  </h3>
+	</tr>
+<tr>
+	<td height="478" bgcolor="#D54343"><p><center>
+	  <strong>American Dwarf Hotot</strong>
+	</center><img src="American-Dwarf-Hotot.gif" width="320" height="374" onmouseover="this.src='americanface.png'" onmouseout="this.src='American-Dwarf-Hotot.gif'" /></p></td>
+	<h3>&nbsp;	  </h3>
+    </tr>
+
+</table>
+<p>&nbsp;</p>
+<h1><div align="center"><a href="BillingOrder.html">Click to go to Order Form</a>
+</div> </h1>
+<p>
+  
+</body>
+</html>

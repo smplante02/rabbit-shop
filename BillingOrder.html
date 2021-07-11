@@ -1,0 +1,252 @@
+<script>
+function doSubmit()
+		{
+		if (validateText() == false)
+		{
+		alert("Required data missing in Step 1 or 6");
+		return;
+	}
+	if (validateRadio() == false)
+	{
+	alert("Required data missing in Step 2, 3, 4, 5, 6, 7.");
+	return;
+}
+		alert("You have filled out all the required fields.");
+		return;
+	}
+function validateText()
+{
+	var customer = document.OrderForm.customer.value;
+	if (customer.length == 0) return false;
+	var address = document.OrderForm.address.value;
+	if (address.length == 0) return false;
+	var city = document.OrderForm.city.value;
+	if (city.length == 0) return false;
+	var phone = document.OrderForm.phone.value;
+	if (phone.length == 0) return false;
+	var credit = document.OrderForm.credit.value;
+	if (credit.length == 0) return false;
+	return true;
+}
+function validateRadio()
+{
+	if (document.OrderForm.type[0].checked) return true;
+	if (document.OrderForm.type[1].checked) return true;
+	if (document.OrderForm.type[2].checked) return true;
+	if (document.OrderForm.type[3].checked) return true;
+	if (document.OrderForm.age[0].checked) return true;
+	if (document.OrderForm.age[1].checked) return true;
+	if (document.OrderForm.size[0].checked) return true;
+	if (document.OrderForm.size[1].checked) return true;
+	if (document.OrderForm.size[2].checked) return true;
+	if (document.OrderForm.gender[0].checked) return true;
+	if (document.OrderForm.gender[1].checked) return true;
+	if (document.OrderForm.payment[0].checked) return true;
+	if (document.OrderForm.payment[1].checked) return true;
+	if (document.OrderForm.payment[2].checked) return true;
+	if (document.OrderForm.payment[3].checked) return true;
+	if (document.OrderForm.payment[4].checked) return true;
+	if (document.OrderForm.payment[5].checked) return true;
+	if (document.OrderForm.shipping[0].checked) return true;
+	if (document.OrderForm.shipping[1].checked) return true;
+	if (document.OrderForm.shipping[2].checked) return true;
+	return false;
+}
+function doClear()
+	{
+		document.OrderForm.customer.value = "";
+		document.OrderForm.address.value = "";
+		document.OrderForm.city.value = "";
+		document.OrderForm.state.value = "";
+		document.OrderForm.zip.value = "";
+		document.OrderForm.phone.value = "";
+		document.OrderForm.total.value = "";
+		document.OrderForm.total1.value = "";
+		document.OrderForm.total2.value = "";
+		document.OrderForm.total3.value = "";
+		document.OrderForm.credit.value = "";
+
+		document.OrderForm.type[0].checked = false;
+		document.OrderForm.type[1].checked = false;
+		document.OrderForm.type[2].checked = false;
+		document.OrderForm.type[3].checked = false;
+		document.OrderForm.age[0].checked = false;
+		document.OrderForm.age[1].checked = false;
+		document.OrderForm.size[0].checked = false;
+		document.OrderForm.size[1].checked = false;
+		document.OrderForm.size[2].checked = false;
+		document.OrderForm.gender[0].checked = false;
+		document.OrderForm.gender[1].checked = false;
+		document.OrderForm.payment[0].checked = false;
+		document.OrderForm.payment[1].checked = false;
+		document.OrderForm.payment[2].checked = false;
+		document.OrderForm.payment[3].checked = false;
+		document.OrderForm.payment[4].checked = false;
+		document.OrderForm.payment[5].checked = false;
+		document.OrderForm.shipping[0].checked = false;
+		document.OrderForm.shipping[1].checked = false;
+		document.OrderForm.shipping[2].checked = false;
+
+		return;
+		}
+function doCalc()
+	{
+		
+		price=0.00;
+		if (OrderForm.type[0].checked == true)
+		{price=15.00;}
+
+		if (OrderForm.type[1].checked == true)
+		{price=10.00;}
+
+		if (OrderForm.type[2].checked == true)
+		{price=10.00;}
+		
+		if (OrderForm.type[3].checked == true)
+		{price=10.00;}
+		
+		if (OrderForm.age[0].checked == true)
+		{price2=5.00;}
+		
+		if (OrderForm.age[1].checked == true)
+		{price2=10.00;}
+		
+		if (OrderForm.size[0].checked == true)
+		{price3=5.00;}
+		
+		if (OrderForm.size[1].checked == true)
+		{price3=10.00;}
+		
+		if (OrderForm.size[2].checked == true)
+		{price3=15.00;}
+		
+		if (OrderForm.gender[0].checked == true)
+		{price4=0.00;}
+		
+		if (OrderForm.gender[1].checked == true)
+		{price4=0.00;}
+		
+		if (OrderForm.shipping[0].checked == true)
+		{price5=3.50;}
+		
+		if (OrderForm.shipping[1].checked == true)
+		{price5=5.50;}
+		
+		if (OrderForm.shipping[2].checked == true)
+		{price5=7.50;}
+	
+
+		document.OrderForm.total.value=eval(price+price2+price3+price4);
+		document.OrderForm.total1.value=eval(document.OrderForm.total.value*.0625);
+		document.OrderForm.total2.value=eval(price5);
+	var x = document.OrderForm.total.value
+	var y = document.OrderForm.total1.value
+	var z = document.OrderForm.total2.value
+	var a = document.OrderForm.total3.value
+		document.OrderForm.total3.value = eval(parseFloat (x) + parseFloat (y) + parseFloat (z));
+	}	
+</script>
+<style type="text/css">
+@import url("RABBIT.css");
+</style>
+<body>
+<form name="OrderForm">
+<center><img src="Banner.gif" width="747" height="224" /></center>
+
+<h1 align="center">Order Form</h1>
+<h4 align="center">Step 1: Enter your name, address, and phone number:</h4>
+	<div align="center">
+	<p><font face="Courier New">
+	  Name: &nbsp;&nbsp;&nbsp;<input name="customer" size="50"
+		type="text"><br>
+	  Address: <input name="address" size="50" type="text"><br>
+	  City: &nbsp;&nbsp;&nbsp;<input name="city" size="15" type="text">
+	  State: <input name="state" size="10" type="TEXT">
+	  Zip: <input name="zip" size="10" type="text"><br>
+	  Phone: &nbsp;&nbsp;<input name="phone" size="50" type="text"><br>
+	  </font>
+<h4 align="center">Step 2: Select Rabbit Type:</h4>
+<p>
+  <input name="type" type="radio">
+    English Angora
+	<input name="type" type="radio">
+    Jersey Wooley
+    <input name="type" type="radio">
+  	Harlequin
+    <input name="type" type="radio">
+  	American Dwarf Hotot
+<p>&nbsp; </p>
+<h4 align="center">Step 3: Select Rabbit Age:</h4>
+<p>
+  <input name="age" type="radio">
+    Adolescent
+	<input name="age" type="radio">
+    Adult
+<p>&nbsp;</p>
+<h4 align="center">Step 4: Select Rabbit Size:</h4>
+<p>
+  <input name="size" type="radio">
+    Petite
+	<input name="size" type="radio">
+    Medium
+    <input name="size" type="radio">
+    Large
+<p>&nbsp;</p>
+<h4 align="center">Step 5: Select Rabbit Gender:</h4>
+<p>
+  <input name="gender" type="radio">
+    Male
+	<input name="gender" type="radio">
+    Female
+<p>&nbsp;</p>
+<h4 align="center">Step 6: Enter billing Information:</h4>
+<p>
+  <input name="payment" type="radio">
+    PayPal
+	<input name="payment" type="radio">
+    Debit Card
+    <input name="payment" type="radio">
+  	Gift Cards
+    <input name="payment" type="radio">
+  	Venmo
+    <input name="payment" type="radio">
+  	Google Checkout
+    <input name="payment" type="radio">
+	Amazon</p>
+<p><br />
+  Credit Card Number: &nbsp;&nbsp;<input name="credit" size="50" type="text"><br>
+</p>
+<h4 align="center">Step 7: Select shipping option:</h4>
+<p>
+    <input name="shipping" type="radio">
+    Standard
+<input name="shipping" type="radio">
+    Express
+<input name="shipping" type="radio">
+    Overnight</p>
+<p>&nbsp;</p>
+<h4 align="center">Step 8: Calculate Cost:</h4>
+<p>Net Price:
+  <input type="text" name="total" readonly>
+</p>
+<p>Additional Tax Cost:
+  <input type="text" name="total1" readonly>
+</p>
+<p>Additional Shipping Cost:
+  <input type="text" name="total2" readonly>
+</p>
+<p>Total Price:
+  <input type="text" name="total3" readonly>
+</p>
+<p>
+	
+  <input type="button" value="Confirm" onClick="doSubmit()">
+  <input type="button" value="Clear Entries" onClick="doClear()">
+  <input type="button" value="Calculate" onClick="doCalc()">
+  <input type="button" onClick="location.href='Submit.html';" value="Submit" />
+  
+</p>
+<p>&nbsp;</p>
+<h2><div align="center"><a href="Rabboot.html">Click to go to Shop</a></h2>
+</div>
+</body>
